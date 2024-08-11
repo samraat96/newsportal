@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+     <link href="{% static 'images/d8.jpg'%}" rel="icon"/>
+    <meta charset="UTF-8">
+    <title>
+       {% block title %}
+        Home
+       {% endblock %}
+    </title>
+    <style>
+        {% block style %}
+        {% endblock %}
+    </style>
+    <style>
+        .t1
+        {
+        font-size:15px;
+        }
+        :root
+        {
+        --bgcolor:linear-gradient(60deg,#d11346,#003a9d);
+        --txtcolor:#ff1744;
+        --bgcolor1:#e8e8e8;
+        --txtcolor1:#e8e8e8;
+        }
+        .bg-mycolor1
+        {
+        background:var(--bgcolor1)!important;
+        }
+        .bg-mycolor
+        {
+        background:var(--bgcolor)!important;
+        }
+        .text-mycolor1
+        {
+        color:var(--txtcolor1)!important;
+        }
+         .text-mycolor
+        {
+        color:var(--txtcolor)!important;
+        }
+        .fa-brands
+        {
+        border:1px solid white;
+        padding:.3%;
+
+        }
+        .fa-brands:hover
+        {
+        transform:rotate(360deg);
+        transition:all 1s;
+        background:white;
+        color:green;
+
+        }
+        #menu
+        {
+         background:transparent!important;
+        }
+        #menu ul li a
+        {
+        color:white;
+        }
+        .footer1
+        {
+        min-height:300px;
+        color:white;
+        }
+        .footer2
+        {
+        min-height:30px;
+        margin-top:.1%;
+        }
+        .t1
+        {
+        font-size:13px;
+        }
+        .social a
+        {
+        color:teal;
+        font-size:33px;
+        }
+        .a
+        {
+        color:green;
+        }
+
+    </style>
+    <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet"/>
+    <link href="{% static 'css/all.css'%}" rel="stylesheet"/>
+
+</head>
+<body>
+
+<script src="{% static 'js/bootstrap.bundle.js'%}"></script>
+<div class="container-fluid">
+    <div class="row t1 text-center bg-mycolor1 text- py-1">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <i class="fa-solid fa-phone"></i>+91-9648001712</div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <i class="fa-solid fa-envelope fa-shake"></i> deepakkanojiya1632478@gmail.com</div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <i class="fa-solid fa-landmark"></i>
+         An || ISO 9001-2015 Registerd Company
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 fs-4">
+        </div>
+    </div>
+    <div class="row py-1 bg-light t2">
+      <div class="col-sm-8 fs-1 mx-auto">𝕿𝖍𝖊 𝕿𝖎𝖒𝖊𝖘 𝖔𝖋<b class="text-danger"> 𝕴𝖓𝖉𝖎𝖆</b>
+      <i class="fa-solid fa-newspaper"></i></div>
+        <div class="col-sm-2 social mx-auto mb-2">
+            <a href="#"><i class="fa-brands fa-square-facebook fa-"></i></a>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+     </div>
+
+</div>
+    </div>
+    </div>
+    <div class="row t3 bg-mycolor">
+        <div class="col-sm-8 mx-auto text-center">
+            <!--start menu -->
+           <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler bg-mycolor" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span><b class="text-mycolor">Menu</b>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/user/index/"><i class="fa-solid fa-house fa-fade a"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/news/"><i class="fa-regular fa-newspaper fa-fade a"></i> News</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/user/about/"><i class="fa-solid fa-circle-info fa-fade a"></i> About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/videos/"><i class="fa-solid fa-video fa-fade a"></i> Videos</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/user/feedback/"><i class="fa-solid fa-comment fa-fade a"></i> Feedback</a>
+        </li>
+           </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/user/contact/"><i class="fa-solid fa-address-book fa-fade a"></i> Contact Us</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/user/jobs/"><i class="fa-solid fa-magnifying-glass fa-fade a"></i> Jobs</a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" href="/admin/login/?next=/admin/"><i class="fa-solid fa-right-to-bracket fa-fade a"></i> Login</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+            <!--end menu -->
+        </div>
+    </div>
+</div>
+
+{% block childpage %}
+
+{% endblock %}
+<div class="footer1 mb-1 bg-dark">
+<div class="container-fluid footerTop">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 py-3">
+                <img src="{% static 'images/1.jpg' %}"/>
+                <img src="{% static 'images/2.png' %}"/>
+                <img src="{% static 'images/3.png' %}"/>
+                </a>
+            </div>
+            <div class="col-sm-4 fs-5 py-5 py-5">
+                <h5 class="Heading">Contact <b style="text-decoration:none;color:orange;">Address</b></h5>
+                <p>
+                    <i class="fa fa-home"></i> Plot No-43, Behind H.P Petrol Pump,<br />
+                    Tedhi Pulia Ring Rd, Sector 5,<br />
+                    Vikas Nagar, Lucknow,<br />
+                    Uttar Pradesh 226022
+                </p>
+                <p>
+                    <a href="tel:+91 9648001712"><i class="fas fa-phone-alt"></i> +91-9648001712</a><br />
+                    <a href="mailto:deepakkanojiya1632478@gmail.com" target="_blank"><i class="far fa-envelope"></i> deepakkanojiya1632478@gmail.com</a>
+                </p>
+                <div class="col-sm-4 fs-5 py-5 py-5">
+                <h5 class="Heading" style="font-size:25px;">To Connect</h5>
+                <div class="Social">
+                    <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com//" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://web.whatsapp.com/" title="Whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-4 py-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.1611509332774!2d80.9638446751678!3d26.89838026070682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39995785d5f7f1a5%3A0xffa47f1efe103f0d!2sTechpile%20Technology%20Pvt.%20Ltd.%20%7C%7C%20software%20training%20institute%20in%20Lucknow!5e0!3m2!1sen!2sin!4v1695043162454!5m2!1sen!2sin"
+                        width="470" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="col-sm-4 py-2" style="font-size:30x;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="footer2 bg-dark " style="border-radius-down:10px;">
+            <div class="row pt-1">
+        <div class="col-sm-6 py-1 ">
+            <span class="text-light ms-2">&nbsp;&#169;
+                2018 <a href="https://www.techpile.in/" style="text-decoration:none;color:orange;">Techpile Technology</a>
+                2018 | Develop BY <a href="https://www.techpile.in/" style="text-decoration:none;color:orange;">Technical Team</a>
+            </span>
+        </div>
+        <div class="col-sm-6 text-mycolor1 text-end">
+            Designed BY <b style="text-decoration:none;color:orange;"><a href="/user/mypage/">Deepak kumar</a></b>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/bootstrap.bundle.js'%}"></script>
+
+</body>
+</html>
